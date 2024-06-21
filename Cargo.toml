@@ -1,0 +1,14 @@
+[package]
+name = "hey-dummy"
+version = "0.1.0"
+edition = "2021"
+description = "A dummy package for testing purposes"
+license = "MIT"
+exclude = [
+    "*",
+]
+include = [
+    "src/**",
+]
+[[bin]]
+name = "hey-dummy"

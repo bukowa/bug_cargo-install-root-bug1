@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+      - name: Build Docker image
+        run: docker build -t my-docker-image .
+
+      - name: run1
+        run: docker run --entrypoint=/app/entrypoint.sh my-docker-image
+
+      - name: run2
+        run: docker run --entrypoint=/app/entrypoint2.sh my-docker-image

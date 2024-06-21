@@ -1,0 +1,2 @@
+[install]
+root = "./node_modules/.bin/.rust-install"
